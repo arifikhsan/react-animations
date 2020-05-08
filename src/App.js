@@ -3,6 +3,7 @@ import ComponentOne from "./ComponentOne";
 import ComponentTwo from "./ComponentTwo";
 import ComponentThree from "./ComponentThree";
 import { Transition, animated } from "react-spring/renderprops";
+import ComponentFour from "./ComponentFour";
 
 class App extends Component {
   state = {
@@ -40,6 +41,7 @@ class App extends Component {
             ))
           }
         </Transition>
+        <ComponentFour />
       </div>
     );
   }
