@@ -3,16 +3,17 @@ import { Transition, animated } from "react-spring/renderprops";
 
 export default class ComponentFour extends Component {
   state = {
-    fruits: ["orange", "rambutan", "banana"],
+    fruits: ["semangka", "rambutan"],
     currentFruitIndex: 0,
   };
 
   componentDidMount() {
     setInterval(() => {
       this.setState({
-        currentFruitIndex: (this.state.currentFruitIndex + 1) % 3,
+        currentFruitIndex:
+          (this.state.currentFruitIndex + 1) % this.state.fruits.length,
       });
-    }, 4000);
+    }, 5000);
   }
 
   render() {
@@ -28,14 +29,13 @@ export default class ComponentFour extends Component {
               from={{ opacity: 0 }}
               enter={{ opacity: 1 }}
               leave={{ opacity: 0 }}
-              config={{duration: 1000}}
+              config={{ duration: 1000 }}
             >
               {(show) =>
                 show &&
                 ((props) => (
                   <animated.span style={props}>
                     {this.state.fruits[this.state.currentFruitIndex]}
-                    {/* aaa */}
                   </animated.span>
                 ))
               }

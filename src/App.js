@@ -14,11 +14,11 @@ class App extends Component {
     this.setState({ showComponentThree: !this.state.showComponentThree });
 
   componentDidMount() {
-    setInterval(() => {
-      this.setState({
-        showComponentThree: !this.state.showComponentThree,
-      });
-    }, 2000);
+    // setInterval(() => {
+    //   this.setState({
+    //     showComponentThree: !this.state.showComponentThree,
+    //   });
+    // }, 2000);
   }
   render() {
     return (
